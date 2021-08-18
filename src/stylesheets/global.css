@@ -17,6 +17,7 @@
     --white: #fff;
     --black: #000;
     --light-grey: #fafafa;
+    --dark-grey: #ececec;
     --blue: #2962FF;
     --pale-blue: #82B1FF;
     --palest-blue: #BBDEFB;
@@ -29,12 +30,4 @@ body {
     font-family: 'Roboto';
     font-weight: 300;
     font-size: 14px;
-}
-
-button {
-    font-family: inherit;
-    font-weight: inherit;
-    background-color: inherit;
-    border: 0px none;
-    cursor: pointer;
 }
