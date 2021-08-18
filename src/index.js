@@ -4,4 +4,4 @@ import './stylesheets/header.css'
 import './stylesheets/sidebar.css'
 import './stylesheets/main.css'
 
-import main from './modules/main';
+// import main from './modules/main';
