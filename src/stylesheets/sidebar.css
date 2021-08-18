@@ -1,0 +1,19 @@
+.sidebar {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    grid-row: 2;
+    grid-column: 1;
+    height: 100vh;
+    background-color: var(--light-grey);
+}
+
+.sidebar > * {
+    margin: 5px 0;
+}
+
+.projects-header > span {
+    font-weight: 500;
+}
