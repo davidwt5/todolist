@@ -1,13 +1,38 @@
+/* roboto-300 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Roboto-Light.ttf');
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Roboto-Medium.ttf')
+  }
+
 :root {
+    --white: #fff;
+    --black: #000;
     --light-grey: #fafafa;
     --blue: #2962FF;
+    --pale-blue: #82B1FF;
+    --palest-blue: #BBDEFB;
 }
 
 body {
     display: grid;
     grid-template-rows: 5vh auto;
     grid-template-columns: 1fr 3fr;
-    /* font-family:  */
+    font-family: 'Roboto';
+    font-weight: 300;
+}
+
+button {
+    font-family: inherit;
+    font-weight: inherit;
 }
 
 .header {
