@@ -1,5 +1,5 @@
-import Project from './modules/Project'
-import displayController from './modules/displayController'
+import Project from './Project'
+import displayController from './displayController'
 
 const main = (() => {
     

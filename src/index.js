@@ -5,4 +5,4 @@ import './stylesheets/sidebar.css'
 import './stylesheets/main.css'
 import './stylesheets/popup.css'
 
-// import main from './modules/main';
+import main from './modules/main';
