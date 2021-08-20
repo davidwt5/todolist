@@ -1,22 +1,16 @@
+/* Controls DOM interaction */
 const displayController = (() => {
-    document.querySelector('.projects-header .plus')
-        .addEventListener('click', () => {
-            document.querySelector('.popup-film').classList.remove('invisible');
-        });
-
-    document.querySelector('.popup-film .cancel')
-        .addEventListener('click', () => {
+    const handlers = {
+        newProjectPopupHandler: () => document.querySelector('.popup-film').classList.remove('invisible'),
+        cancelNewProjectPopupHandler: () => document.querySelector('.popup-film').classList.add('invisible'),
+        addNewProjectPopupHandler: () => {
+            const newProjectName = document.getElementById('new-project-name');
+            newProjectName.value = "";
             document.querySelector('.popup-film').classList.add('invisible');
-        });
+        }
+    }
 
-    document.querySelector('.popup-film .confirm')
-        .addEventListener('click', () => {
-            const newProjectName = document.getElementById('new-project-name').value;
-            console.log(newProjectName); // Placeholder for updating project DS in localStorage
-            document.querySelector('.popup-film').classList.add('invisible');
-        });
-
-    return {};
+    return Object.assign({}, handlers);
 })();
 
 export default displayController;
