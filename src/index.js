@@ -6,20 +6,21 @@ import './views/stylesheets/main.css'
 import './views/stylesheets/popup.css'
 
 import displayController from './controllers/displayController';
+import projectController from './controllers/projectController'
 
 (() => {
     document.querySelector('.projects-header .plus')
     .addEventListener('click', () => {
-        displayController.newProjectPopupHandler();
+        displayController.newProjectPopup();
     });
 
     document.querySelector('.popup-film .cancel')
     .addEventListener('click', () => {
-        displayController.cancelNewProjectPopupHandler();
+        displayController.cancelNewProject();
     });
 
     document.querySelector('.popup-film .confirm')
     .addEventListener('click', () => {
-        displayController.addNewProjectPopupHandler();
+        displayController.addNewProject();
     });
 })();
