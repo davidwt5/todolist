@@ -1,0 +1,79 @@
+.transparent-film {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.5;
+    background-color: black;
+    z-index: 0;
+    /* visibility: hidden; */
+}
+
+.popup-film {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  position: fixed;
+  border: 0px solid black;
+  border-radius: 10px;
+  background-color: white;
+  width: 20vw;
+}
+
+.popup > * {
+  height: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.popup > .popup-header {
+  background-color: var(--light-grey);  
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.popup > .popup-main > label{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup > .popup-main > input{
+  display: block;
+  border-radius: 5px;
+  border: 1px var(--line-grey) solid;
+  padding-left: 5px;
+  width: 95%;
+}
+
+.popup > .buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popup > .buttons > * {
+  border: 0.5px var(--line-grey) solid;
+  padding: 15px 10px;
+  line-height: 1px;
+  font-weight: bold;
+  font-family: Roboto;
+}
+
+.popup > .buttons > .cancel {
+  margin-right: 8px;
+  background-color: --var(--light-grey);
+}
+
+.popup > .buttons > .confirm {
+  background-color: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}

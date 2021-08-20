@@ -10,14 +10,8 @@
 }
 
 .sidebar > * {
-    user-select: none;
     margin: 5px 0;
     text-align: center;
-}
-
-.sidebar .clickable {
-    cursor: pointer;
-    border-radius: 3px;
 }
 
 .sidebar .clickable:hover {

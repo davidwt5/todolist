@@ -18,25 +18,27 @@
     --black: #000;
     --light-grey: #fafafa;
     --dark-grey: #ececec;
+    --line-grey: #ddd;
     --blue: #2962FF;
     --pale-blue: #82B1FF;
     --palest-blue: #BBDEFB;
 }
 
 body {
-    display: grid;
-    grid-template-rows: 5vh auto;
-    grid-template-columns: 1fr 3fr;
-    font-family: 'Roboto';
-    font-weight: 300;
-    font-size: 14px;
+  user-select: none;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 14px;
 }
 
-.transparent-film {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  opacity: 0.5;
-  background-color: black;
-  visibility: hidden;
+.content {
+  display: grid;
+  grid-template-rows: 5vh auto;
+  grid-template-columns: 1fr 3fr;
+}
+
+.clickable {
+  cursor: pointer;
+  border-radius: 3px;
+  border-style: solid;
 }
