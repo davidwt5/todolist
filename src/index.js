@@ -21,6 +21,9 @@ import projectController from './controllers/projectController'
 
     document.querySelector('.popup-film .confirm')
     .addEventListener('click', () => {
+        const newProjectName = document.getElementById('new-project-name').value;
         displayController.addNewProject();
+        projectController.addNewProject(newProjectName);
+        // console.log(projectController.getProjects());
     });
 })();
