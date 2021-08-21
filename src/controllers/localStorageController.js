@@ -17,7 +17,15 @@ const localStorageController = (() => {
         setObjectToLocalStorage("projects", projects);
     }
 
-    return {addNewProject, getProjects};
+    const deleteProject = projectId => {
+        const projects = getProjects();
+        const ids = projects.map(project => project.id);
+        const index = ids.indexOf(projectId);
+        projects.splice(index, 1);
+        setObjectToLocalStorage("projects", projects);
+    }
+
+    return {addNewProject, getProjects, deleteProject};
 })();
 
 export default localStorageController;

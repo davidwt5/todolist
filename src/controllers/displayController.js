@@ -6,19 +6,28 @@ const displayController = (() => {
         addNewProject: newProject => {
             newProject.value = "";
             document.querySelector('.popup-film').classList.add('invisible');
-        }
+        },
+        deleteProject: projectNode => projectNode.remove(),
     }
 
     const _createProjectComponent = project => {
         const projectDOM = document.createElement("div");
         projectDOM.classList.add("project");
-        projectDOM.classList.add("clickable");
-        
-        const nameDOM = document.createElement("span");
-        nameDOM.classList.add("name");
-        nameDOM.innerText = project.name;
-        
-        projectDOM.appendChild(nameDOM);
+        projectDOM.dataset.id = project.id;
+
+        const projectMainDOM = document.createElement("div");
+        projectMainDOM.classList.add("clickable");
+        projectMainDOM.classList.add("project-main");
+        projectMainDOM.innerText = project.name;
+
+        const removeProjectDOM = document.createElement("span");
+        removeProjectDOM.classList.add("clickable");
+        removeProjectDOM.classList.add("cross");
+        removeProjectDOM.innerText = 'X';
+        projectDOM.appendChild(removeProjectDOM);
+
+        projectDOM.appendChild(projectMainDOM);
+
         return projectDOM;
     }
 

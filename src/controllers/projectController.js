@@ -7,8 +7,9 @@ const projectController = (() => {
         localStorageController.addNewProject(newProject);
     }
     const getProjects = () => localStorageController.getProjects();
+    const deleteProject = projectId => localStorageController.deleteProject(projectId);
 
-    return {addNewProject, getProjects};
+    return {addNewProject, getProjects, deleteProject};
 })();
 
 export default projectController;

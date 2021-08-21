@@ -1,4 +1,5 @@
 import Todo from './Todo'
+import { v4 as uuidv4 } from 'uuid';
 
 const Project = (name) => {
     // const methods = {
@@ -7,7 +8,7 @@ const Project = (name) => {
     // }
 
     // return Object.assign({}, methods);
-    return {name};
+    return {id: uuidv4(), name};
 }
 
 export default Project;
