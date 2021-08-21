@@ -9,6 +9,8 @@ import displayController from './controllers/displayController';
 import projectController from './controllers/projectController'
 
 (() => {
+    displayController.renderProjects(projectController.getProjects());
+    
     document.querySelector('.projects-header .plus')
     .addEventListener('click', () => {
         displayController.newProjectPopup();
@@ -21,9 +23,11 @@ import projectController from './controllers/projectController'
 
     document.querySelector('.popup-film .confirm')
     .addEventListener('click', () => {
-        const newProjectName = document.getElementById('new-project-name').value;
-        displayController.addNewProject();
-        projectController.addNewProject(newProjectName);
-        // console.log(projectController.getProjects());
+        const newProject = document.getElementById('new-project-name');
+        projectController.addNewProject(newProject.value);
+        displayController.addNewProject(newProject);
+        
+        const projects = projectController.getProjects();
+        displayController.renderProjects(projects);
     });
 })();
